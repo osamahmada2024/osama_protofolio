@@ -1,23 +1,23 @@
 <!doctype html>
-<html lang="en">
+<html lang="en" data-theme="dark">
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Osama Hamada — AI Engineer</title>
   <meta name="description" content="Osama Hamada — AI Engineer in Cairo, Egypt. Machine learning, deep learning, agentic systems and computer vision, from research to production.">
-  <meta name="color-scheme" content="light dark">
+  <meta name="color-scheme" content="dark light">
   <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%231d1d1f'/%3E%3Ctext x='32' y='42' font-family='Helvetica,Arial,sans-serif' font-size='26' font-weight='700' fill='%23f5f5f7' text-anchor='middle'%3EOH%3C/text%3E%3C/svg%3E">
   <script>
     (function () {
       var t = localStorage.getItem("theme");
-      if (t !== "light" && t !== "dark") t = matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light";
+      if (t !== "light" && t !== "dark") t = "dark";
       document.documentElement.dataset.theme = t;
     })();
   </script>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;500;600&family=DM+Mono:wght@400;500&family=Great+Vibes&family=Instrument+Serif:ital@0;1&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="css/style.css?v=5.4">
+  <link rel="stylesheet" href="css/style.css?v=5.5">
 </head>
 <body>
 <div class="scroll-progress-bar" id="scrollProgress" aria-hidden="true"></div>
@@ -67,7 +67,7 @@
         <svg class="icon-sound-on" viewBox="0 0 24 24" aria-hidden="true"><path d="M11 5L6 9H2v6h4l5 4V5z"/><path d="M15.54 8.46a5 5 0 0 1 0 7.07"/><path d="M19.07 4.93a10 10 0 0 1 0 14.14"/></svg>
         <svg class="icon-sound-off" viewBox="0 0 24 24" aria-hidden="true"><path d="M11 5L6 9H2v6h4l5 4V5z"/><line x1="23" y1="9" x2="17" y2="15"/><line x1="17" y1="9" x2="23" y2="15"/></svg>
       </button>
-      <button class="theme-toggle" id="themeToggle" type="button" aria-label="Switch to dark mode">
+      <button class="theme-toggle" id="themeToggle" type="button" aria-label="Switch to light mode">
         <svg class="icon-moon" viewBox="0 0 24 24" aria-hidden="true"><path d="M20.5 14.4A8.5 8.5 0 0 1 9.6 3.5a8.5 8.5 0 1 0 10.9 10.9Z"/></svg>
         <svg class="icon-sun" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="4.2"/><path d="M12 2.5v2.2M12 19.3v2.2M4.6 4.6l1.6 1.6M17.8 17.8l1.6 1.6M2.5 12h2.2M19.3 12h2.2M4.6 19.4l1.6-1.6M17.8 6.2l1.6-1.6"/></svg>
       </button>

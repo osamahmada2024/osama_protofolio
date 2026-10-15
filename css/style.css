@@ -1,27 +1,4 @@
 :root,
-[data-theme="light"] {
-  --bg: #ffffff;
-  --card: #f5f5f7;
-  --card-hover: #ebebee;
-  --fg: #1d1d1f;
-  --fg-2: #6e6e73;
-  --fg-3: #86868b;
-  --line: rgba(0, 0, 0, 0.08);
-  --chip: #ffffff;
-  --nav-bg: rgba(255, 255, 255, 0.82);
-  --shadow: 0 16px 40px rgba(0, 0, 0, 0.06);
-  --link: #0066cc;
-  --btn: #0071e3;
-  --btn-hover: #0077ed;
-  --accent: #0071e3;
-  --accent-glow: rgba(0, 113, 227, 0.18);
-  --blue: #0071e3;
-  --green: #0071e3;
-  --orange: #0071e3;
-  --indigo: #0071e3;
-  --teal: #0071e3;
-}
-
 [data-theme="dark"] {
   --bg: #000000;
   --card: #151517;
@@ -43,6 +20,29 @@
   --orange: #2997ff;
   --indigo: #2997ff;
   --teal: #2997ff;
+}
+
+[data-theme="light"] {
+  --bg: #ffffff;
+  --card: #f5f5f7;
+  --card-hover: #ebebee;
+  --fg: #1d1d1f;
+  --fg-2: #6e6e73;
+  --fg-3: #86868b;
+  --line: rgba(0, 0, 0, 0.08);
+  --chip: #ffffff;
+  --nav-bg: rgba(255, 255, 255, 0.82);
+  --shadow: 0 16px 40px rgba(0, 0, 0, 0.06);
+  --link: #0066cc;
+  --btn: #0071e3;
+  --btn-hover: #0077ed;
+  --accent: #0071e3;
+  --accent-glow: rgba(0, 113, 227, 0.18);
+  --blue: #0071e3;
+  --green: #0071e3;
+  --orange: #0071e3;
+  --indigo: #0071e3;
+  --teal: #0071e3;
 }
 
 :root {
@@ -195,8 +195,25 @@ h1 em, .sec-title em, .contact-title span {
   transition: opacity 0.35s var(--ease), transform 0.4s var(--ease-out);
 }
 
-[data-theme="light"] .icon-sun,
-[data-theme="dark"] .icon-moon { opacity: 0; transform: rotate(-90deg) scale(0.6); }
+/* Theme icon states: Dark mode is default */
+.theme-toggle .icon-moon { opacity: 0; transform: rotate(-90deg) scale(0.6); }
+.theme-toggle .icon-sun { opacity: 1; transform: rotate(0) scale(1); }
+
+[data-theme="light"] .theme-toggle .icon-sun { opacity: 0; transform: rotate(90deg) scale(0.6); }
+[data-theme="light"] .theme-toggle .icon-moon { opacity: 1; transform: rotate(0) scale(1); }
+
+[data-theme="dark"] .theme-toggle .icon-moon { opacity: 0; transform: rotate(-90deg) scale(0.6); }
+[data-theme="dark"] .theme-toggle .icon-sun { opacity: 1; transform: rotate(0) scale(1); }
+
+/* Dual-theme assets toggle (defaults to Dark Mode) */
+.only-light { display: none !important; }
+.only-dark { display: block !important; }
+
+[data-theme="light"] .only-light { display: block !important; }
+[data-theme="light"] .only-dark { display: none !important; }
+
+[data-theme="dark"] .only-light { display: none !important; }
+[data-theme="dark"] .only-dark { display: block !important; }
 
 .sound-toggle.muted .icon-sound-on { opacity: 0; transform: scale(0.5); }
 .sound-toggle:not(.muted) .icon-sound-off { opacity: 0; transform: scale(0.5); }
